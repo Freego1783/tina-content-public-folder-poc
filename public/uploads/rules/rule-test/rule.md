@@ -1,6 +1,6 @@
 ---
 title: Test Rule
-image: /uploads/rules/rule-test/Oslo.png
+image: /uploads/rules/rule-test/Silice - Erice.png
 ---
 
 Is this working?
