@@ -11,6 +11,7 @@ module.exports = {
         source: "/admin",
         destination: "/admin/index.html",
       },
+      { source: '/.well-known/:path*', destination: '/.well-known/:path*' },
     ];
   },
 }
