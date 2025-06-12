@@ -23,7 +23,7 @@ export default function RuleClientPage(props: RuleClientPageProps) {
     <>
       <h1 data-tina-field={tinaField(data.rule, "title")}>{data.rule.title}</h1>
       {data.rule.image && (
-        <Image src={data.rule.image} alt="thumbnail image for the rule" width={300} height={200} />
+        <Image src={data.rule.image} alt="img" width={300} height={200} />
       )}
       <div data-tina-field={tinaField(data.rule, "body")}>
         <TinaMarkdown content={content} />
