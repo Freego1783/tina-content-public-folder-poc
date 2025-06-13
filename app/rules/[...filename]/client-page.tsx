@@ -18,6 +18,7 @@ export default function RuleClientPage(props: RuleClientPageProps) {
     variables: props.variables,
     data: props.data,
   });
+  console.log("data", data);
   const content = data.rule.body;
   return (
     <>

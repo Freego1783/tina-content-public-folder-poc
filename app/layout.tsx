@@ -17,6 +17,8 @@ export default function RootLayout({
           <Link href="/">Home</Link>
           {" | "}
           <Link href="/posts">Posts</Link>
+                  {" | "}
+          <Link href="/rules">Rules</Link>
         </header>
         <main>{children}</main>
       </body>
