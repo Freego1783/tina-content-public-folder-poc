@@ -1,0 +1,79 @@
+# 🧩 Problem: Markdown and Images Separation in TinaCMS + Next.js
+
+By default:
+- Markdown files live in `content/rules/`
+- Images are uploaded to `public/uploads/`
+
+❌ This breaks self-containment – content and its assets are split.
+
+
+## 🎯 Goal
+
+Each rule should live in **its own folder** with:
+- `rule.md` (or `.mdx`)
+- Embedded images (e.g. `img.png`)
+
+Ideal structure:
+```
+content/
+└── rules/
+    ├── rule-a/
+    │   ├── rule.md
+    │   └── img.png
+    └── rule-b/
+        ├── rule.md
+        └── img.png
+```
+
+## Option 1 — Default Setup + Matching Folders
+
+- Markdown in `content/rules/rule-a/rule.md`
+- Images in `public/uploads/rule-a/`
+- Add link to image folder in frontmatter
+
+✅ Works out of the box  
+✅ Tina Media Manager works as expected  
+❌ Not truly self-contained  
+❌ Needs naming sync between folders
+ 
+\
+\
+![Frontmatter with image link example](./link_in_frontmatter.png)
+
+**Figure: example frontmatter with link to image**
+
+
+## Option 2 — Everything in `/content/rules`
+
+Tried:
+1. Middleware + build-time script
+2. Move image on upload
+3. Reorganize on build
+
+❌ All failed due to:
+- Tina hard-coding `public/` for media
+- No upload hooks
+- Fragile rewrites
+- CI/CD noise, merge conflicts
+
+---
+
+## ⭐ Option 3 — Everything in `/public/uploads/rules`
+
+Structure:
+```
+public/
+└── uploads/
+    └── rules/
+        ├── rule-a/
+        │   ├── rule.md
+        │   └── img.png
+        └── rule-b/
+            ├── rule.md
+            └── img.png
+```
+
+✅ Self-contained  
+✅ Tina Media Manager works  
+✅ No hacks/scripts  
+❗ `.mdx` files live in public, which is unconventional

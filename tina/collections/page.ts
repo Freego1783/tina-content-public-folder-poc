@@ -1,7 +1,6 @@
-/**
- * @type {import('tinacms').Collection}
- */
-export default {
+import { Collection } from "tinacms";
+
+const Post:Collection = {
   label: "Page Content",
   name: "page",
   path: "content/page",
@@ -23,3 +22,5 @@ export default {
     },
   },
 };
+
+export default Post;

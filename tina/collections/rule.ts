@@ -26,7 +26,7 @@ const Rule: Collection = {
     router: ({ document }) => {
       return "/rules/" + document._sys.relativePath.split("/")[0];
     },
-  },
+  }, 
 };
 
 export default Rule;
