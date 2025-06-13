@@ -18,13 +18,13 @@ export default function RuleClientPage(props: RuleClientPageProps) {
     variables: props.variables,
     data: props.data,
   });
-  console.log("data", data);
+
   const content = data.rule.body;
   return (
     <>
       <h1 data-tina-field={tinaField(data.rule, "title")}>{data.rule.title}</h1>
       {data.rule.image && (
-        <Image src={data.rule.image} alt="img" width={300} height={200} />
+        <Image src={data.rule.image} alt="img" width={300} height={300} />
       )}
       <div data-tina-field={tinaField(data.rule, "body")}>
         <TinaMarkdown content={content} />

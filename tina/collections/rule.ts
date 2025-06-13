@@ -1,7 +1,6 @@
-/**
- * @type {import('tinacms').Collection}
- */
-export default {
+import { Collection } from "tinacms";
+
+const Rule: Collection = {
   label: "Rules",
   name: "rule",
   path: "public/uploads/rules",
@@ -25,7 +24,9 @@ export default {
   ],
   ui: {
     router: ({ document }) => {
-      return "/rules/"+document._sys.relativePath.split("/")[0];
+      return "/rules/" + document._sys.relativePath.split("/")[0];
     },
   },
 };
+
+export default Rule;
