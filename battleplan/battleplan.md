@@ -61,8 +61,8 @@ content/
 ```
 
 ✅ Self-contained  
-✅ Tina Media Manager works
-❌ Media are stored in an unusual folder
+✅ Tina Media Manager works  
+❌ Media are stored in an unusual folder  
 ❌ Need extra dev to make it work locally (Middleware)
 
 ---
