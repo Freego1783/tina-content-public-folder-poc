@@ -45,20 +45,26 @@ content/
 
 ## Option 2 — Everything in `/content/rules`
 
-Tried:
-1. Middleware + build-time script
-2. Move image on upload
-3. Reorganize on build
+Structure:
+```
+content/
+└── rules/
+    ├── rule-a/
+    │   ├── rule.md
+    │   └── img.png
+    └── rule-b/
+        ├── rule.md
+        └── img.png
+```
 
-❌ All failed due to:
-- Tina hard-coding `public/` for media
-- No upload hooks
-- Fragile rewrites
-- CI/CD noise, merge conflicts
+✅ Self-contained  
+✅ Tina Media Manager works
+❌ Media are stored in an unusual folder
+❌ Need extra dev to make it work locally (Middleware)
 
 ---
 
-## ⭐ Option 3 — Everything in `/public/uploads/rules`
+## ⭐ Option 3 (recommended) — Everything in `/public/uploads/rules`
 
 Structure:
 ```
