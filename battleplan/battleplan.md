@@ -32,15 +32,16 @@ content/
 - Markdown in `content/rules/rule-a/rule.md`
 - Images in `public/uploads/rule-a/`
 - Add link to image folder in frontmatter
+\
+\
+![Frontmatter with image link example](./link_in_frontmatter.png)
 
 ✅ Works out of the box  
 ✅ Tina Media Manager works as expected  
 ❌ Not truly self-contained  
 ❌ Needs naming sync between folders
  
-\
-\
-![Frontmatter with image link example](./link_in_frontmatter.png)
+
 
 **Figure: example frontmatter with link to image**
 
