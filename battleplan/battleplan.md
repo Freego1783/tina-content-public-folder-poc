@@ -25,6 +25,8 @@ content/
         └── img.png
 ```
 
+---
+
 ## Option 1 — Default Setup + Matching Folders
 
 - Markdown in `content/rules/rule-a/rule.md`
@@ -42,6 +44,7 @@ content/
 
 **Figure: example frontmatter with link to image**
 
+---
 
 ## Option 2 — Everything in `/content/rules`
 
