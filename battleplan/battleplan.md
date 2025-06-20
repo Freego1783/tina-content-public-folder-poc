@@ -35,15 +35,12 @@ content/
 \
 \
 ![Frontmatter with image link example](./link_in_frontmatter.png)
+**Figure: example frontmatter with link to image**
 
 ✅ Works out of the box  
 ✅ Tina Media Manager works as expected  
 ❌ Not truly self-contained  
 ❌ Needs naming sync between folders
- 
-
-
-**Figure: example frontmatter with link to image**
 
 ---
 
